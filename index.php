@@ -6,18 +6,16 @@
 		<?php while ( have_posts() ) : the_post();
 			get_template_part( 'entry-index', get_post_format() );
 		endwhile;?>
-	</div>
-
+		
 	<script type="text/javascript">
 		$(window).load(function() {
 		  var $container = $('#isotope');
-
 		  $container.isotope({
-			itemSelector: '.item'
+			itemSelector: '.item',
+			layoutMode:'masonryHorizontal'
 		  });
-		  $('#iso').isotope( 'shuffle' );
-		  $container.isotope( 'option', { layoutMode: 'masonry' } );
-		  $('#iso').isotope( 'reLayout' );
+		  $('#isotope').isotope( 'shuffle' );
+		  $('#isotope').isotope( 'reLayout' );
 		});
 	</script>
 </div>

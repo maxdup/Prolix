@@ -6,6 +6,7 @@ body {
 #container {
 	position:fixed;
 	top: 0;
+	left: 0;
 	background: #fff;
 	height: 100%;
 	width: 100%;
@@ -22,7 +23,7 @@ body {
 .content{
 	height:100%;
 	margin: 30px;
-	padding-top: 100px;
+	padding-top: 0px;
 }
 
 
@@ -123,29 +124,47 @@ footer{
 }
 
 .entry-header-index {
-	position: relative;
-	z-index: 1;
+	position: absolute;
+	top: 0;
+	left: 0;
 	padding: 4px 4px 4px 10px; 
   	margin: 120px 10px 0px 0px;
 	background: white;
+	opacity:0.9;
 }
 
 
 .isotope-item {
-  z-index: 2;
+	overflow: hidden;
+	z-index: 3;
+}
+
+.isotope-item img {
+	width: 100%;
+	height:100%;
+	z-index:1;
+ 	display: block;
+}
+
+.portrait img {
+    width: 100%;
+}
+.landscape img {
+    height: 100%;
 }
 
 .isotope-hidden.isotope-item {
   pointer-events: none;
-  z-index: 1;
+  z-index: 2;
 }
 
-#containe {
-  padding: 5px;
-  margin: 0 auto;
-  border: 2px solid black; 
+#container {
+height:100%;
 }
 
+#content{
+background: pink;
+}
 .item {
   float: left;
   background: #EEE;
@@ -176,6 +195,7 @@ footer{
        -o-transition-property: height, width;
           transition-property: height, width;
 	height:	100%;
+	color:pink;
 }
 
 .isotope .isotope-item {
