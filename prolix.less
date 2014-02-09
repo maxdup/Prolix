@@ -1,4 +1,9 @@
 /* Prolix */
+@ineffable: #800080;
+@isoitem: 184px;
+@isopad: 10px;
+@isomargin: 0 @isopad @isopad 0;
+
 body {
 	background: #222222;
 	font: 16px arial, sans-serif;
@@ -7,15 +12,14 @@ body {
 	position:fixed;
 	top: 0;
 	left: 0;
-	background: #fff;
+	background: #888;
 	height: 100%;
 	width: 100%;
-	
 }
 .contentcontainer{
-	padding:0px 0px 0px 200px;
-	height: 100%;
-	background: #FFFFFF;
+	height: 92%;
+	background: #888;
+	margin:  2% 0 2% 200px;
 }
 #contentwrapper{
 	height: 100%;
@@ -23,11 +27,14 @@ body {
 	overflow-y: hidden;
 	background: #FFFFFF;
 }
+#contentgallery{
+	height: 100%;
+	padding: 50px 0 50px 0;
+}
 
 .content{
 	height:100%;
 	margin: 30px;
-	padding-top: 0px;
 }
 
 
@@ -54,7 +61,7 @@ nav ul li{
 nav ul li a{
 	text-decoration: none;
 	font-size: 15px;
-	color: #FF0095;
+	color: @ineffable;
 }
 
 .menu{
@@ -97,7 +104,7 @@ footer{
 }
 
 .entry-title-index {
-	font-size: 16px;
+	font-size: 14px;
 	font-weight: 300;
 	line-height: 1.0909090909;
 	margin-bottom: 12px;
@@ -108,8 +115,10 @@ footer{
 	color: #2b2b2b;
 	text-decoration: none;
 	
-}.entry-title-index a:hover{
-	color: #FF0095;
+}
+
+.entry-title-index a:hover{
+	color: @ineffable;
 }
 
 .categ {
@@ -119,21 +128,21 @@ footer{
 
 .categ a {
 	font-size: 14px;
-	color: #2b2b2b;
+	color: @ineffable;
 	text-decoration: none;
 	line-height: 26px;
 }
 
 .categ a:hover {
-	color: #FF0095;
+	color: @ineffable;
 }
 
 .entry-header-index {
 	position: absolute;
 	top: 0;
 	left: 0;
-	padding: 4px 4px 4px 10px; 
-  	margin: 120px 10px 0px 0px;
+	padding: 4px 4px 4px 6px; 
+  	margin: 103px 7px 0px 0px;
 	background: white;
 	opacity:0.9;
 }
@@ -170,17 +179,19 @@ height:100%;
 #content{
 background: pink;
 }
+
 .item {
   float: left;
   background: #EEE;
-  margin: 5px 5px;
-  width: 215px;
-  height: 215px;
+  margin: @isomargin;
+  width: @isoitem;
+  height: @isoitem;
 }
-.item.w2 { width: 440px; }
-.item.h2 { height: 440px; }
-.item.w3 { width: 660px; }
-.item.h3 { height: 660px; }
+
+.item.w2 { width: (@isoitem * 2) + @isopad; }
+.item.h2 { height:(@isoitem * 2) + @isopad; }
+.item.w3 { width: (@isoitem * 3) + (@isopad * 2);}
+.item.h3 { height:(@isoitem * 3) + (@isopad * 2);}
 
 /**** Isotope CSS3 transitions ****/
 

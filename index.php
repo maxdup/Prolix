@@ -1,7 +1,6 @@
 <?php get_header()?>
 <script src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery-1.7.2.min.js" type="text/javascript"></script>
 <script src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery.isotope.min.js" type="text/javascript"></script>
-<script type='text/javascript' src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery.mousewheel.js"></script>
 <div class="contentcontainer">
 	<div id="contentwrapper">
 		<div id="isotope" class="content">
@@ -19,7 +18,7 @@
 <div class="item w2 h2 isotope-item" id="image"><a href="http://farm3.staticflickr.com/2893/8908372697_8468358f2c_o.png" class="lightbox"><img alt="" src="/wp-content/themes/twentyten/image/whale.png" /></a></div>
 <div class="item w1 h1 isotope-item" id="image"><a href="http://farm6.staticflickr.com/5323/8909004648_15f7b88156_o.png" class="lightbox"><img alt="" src="/wp-content/themes/twentyten/image/flower-01.png" /></a></div>
 <div class="item w1 h2 isotope-item" id="image"><a href="http://farm4.staticflickr.com/3823/9777835683_78fdc64da9_o.jpg" class="lightbox"><img alt="" src="/wp-content/themes/twentyten/image/silversurfer_final.png" /></a></div>
-		</div>
+			</div>
 
 		<script type="text/javascript">
 			$(window).load(function() {
@@ -27,6 +26,11 @@
 			  $container.isotope({
 				itemSelector: '.item',
 				layoutMode:'masonryHorizontal'
+			  });
+			  $('#isotope').isotope({
+  			    masonryHorizontal: {
+				  rowHeight: 195
+			    }
 			  });
 			  $('#isotope').isotope( 'shuffle' );
 			  $('#isotope').isotope( 'reLayout' );
