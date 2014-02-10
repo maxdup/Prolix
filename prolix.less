@@ -36,6 +36,28 @@ body {
 	height:100%;
 	margin: 30px;
 }
+#contentvertical{
+	margin-left: 200px;
+	height: 100%;
+	overflow: auto;
+}
+#contentblogpost{
+	background: white;
+	min-width: 400px;
+	max-width: 600px;
+	margin: auto;
+	padding: 122px 15% 5% 15%;
+}
+#contentpage{
+	background: white;
+	width: 900px;
+	height: 100%;
+	margin: auto;
+}
+#contentpagetext{
+	background: white;
+	padding: 122px 50px 5% 50px;
+}
 
 
 /*nav*/
@@ -80,6 +102,7 @@ nav ul li a{
 h1 {
 	font-size: 20px;
 	line-height: 0px;
+	margin-top: 0;
 }
 .title a, .title a:hover, .title a:link, .title a:visited{
 	color: white;
@@ -96,8 +119,12 @@ h1 {
 	-ms-transform: scale(1, -1);
 	transform: scale(1, -1);
 }
-h2 {font-size: 22px;}
-h3 {font-size: 18px;}
+h2 {
+	margin-top: 0;
+}
+h3 {
+	font-size: 18px;
+}
 
 footer{
 
@@ -172,10 +199,6 @@ footer{
   z-index: 2;
 }
 
-#container {
-height:100%;
-}
-
 #content{
 background: pink;
 }
@@ -232,4 +255,87 @@ background: pink;
       -ms-transition-duration: 0s;
        -o-transition-duration: 0s;
           transition-duration: 0s;
+}
+
+/* =WordPress Core
+-------------------------------------------------------------- */
+.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.aligncenter,
+div.aligncenter {
+    display: block;
+    margin: 5px auto 5px auto;
+}
+
+.alignright {
+    float:right;
+    margin: 5px 0 20px 20px;
+}
+
+.alignleft {
+    float: left;
+    margin: 5px 30px 20px 0;
+}
+
+.aligncenter {
+    display: block;
+    margin: 5px auto 5px auto;
+}
+
+a img.alignright {
+    float: right;
+    margin: 5px 0 20px 20px;
+}
+
+a img.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+a img.alignleft {
+    float: left;
+    margin: 5px 30px 20px 0;
+}
+
+a img.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.wp-caption {
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    max-width: 96%; /* Image does not overflow the content area */
+    padding: 5px 3px 10px;
+    text-align: center;
+}
+
+.wp-caption.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignleft {
+    margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignright {
+    margin: 5px 0 20px 20px;
+}
+
+.wp-caption img {
+    border: 0 none;
+    height: auto;
+    margin: 0;
+    max-width: 98.5%;
+    padding: 0;
+    width: auto;
+}
+
+.wp-caption p.wp-caption-text {
+    font-size: 11px;
+    line-height: 17px;
+    margin: 0;
+    padding: 0 4px 5px;
 }
