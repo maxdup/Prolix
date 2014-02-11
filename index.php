@@ -11,19 +11,8 @@
 					get_template_part( 'content-blogpost', get_post_format() );
 				}
 			endwhile;?> 
-		
-		
-<div class="item w1 h2 isotope-item" id="image"><a href="http://farm6.staticflickr.com/5451/8908551329_4cf10de7f5_o.jpg" class="lightbox"><img alt="" src="/wp-content/themes/twentyten/image/venus.png" /></a></div>
-<div class="item w3 h1 isotope-item" id="image"><a href="http://farm4.staticflickr.com/3666/9618665561_9ddfb052af_o.jpg" class="lightbox"><img alt="" src="/wp-content/themes/twentyten/image/snow.jpg" /></a></div>
-<div class="item w2 h1 isotope-item" id="image"><a href="http://farm4.staticflickr.com/3683/8908550883_2666b4a087_o.png" class="lightbox"><img alt="" src="/wp-content/themes/twentyten/image/anybetter.png" /></a></div>
-<div class="item w2 h1 isotope-item" id="image"><a href="http://farm3.staticflickr.com/2885/8909180364_29aa3f690c_o.jpg" class="lightbox"><img alt="" src="/wp-content/themes/twentyten/image/illusionLP.jpg" /></a></div>
-<div class="item w1 h3 isotope-item" id="image"><a href="http://farm4.staticflickr.com/3699/8909005204_960bce3790_o.png" class="lightbox"><img alt="" src="/wp-content/themes/twentyten/image/propaganda-01.png" /></a></div>
-<div class="item w3 h2 isotope-item" id="image"><a href="http://farm4.staticflickr.com/3818/8908378151_393fe69ab5_o.jpg" class="lightbox"><img alt="" src="/wp-content/themes/twentyten/image/fish-01.jpg" /></a></div>
-<div class="item w2 h2 isotope-item" id="image"><a href="http://farm3.staticflickr.com/2893/8908372697_8468358f2c_o.png" class="lightbox"><img alt="" src="/wp-content/themes/twentyten/image/whale.png" /></a></div>
-<div class="item w1 h1 isotope-item" id="image"><a href="http://farm6.staticflickr.com/5323/8909004648_15f7b88156_o.png" class="lightbox"><img alt="" src="/wp-content/themes/twentyten/image/flower-01.png" /></a></div>
-<div class="item w1 h2 isotope-item" id="image"><a href="http://farm4.staticflickr.com/3823/9777835683_78fdc64da9_o.jpg" class="lightbox"><img alt="" src="/wp-content/themes/twentyten/image/silversurfer_final.png" /></a></div>
+	
 			</div>
-
 		<script type="text/javascript">
 			$(window).load(function() {
 			  var $container = $('#isotope');
