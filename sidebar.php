@@ -1,3 +1,1 @@
-<div id="sidebar">
-	sidebar
-</div> 
+<div id="footer">Wordpress theme designed by yours truly</div>
