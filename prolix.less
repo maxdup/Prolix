@@ -253,11 +253,16 @@ background: pink;
 }
 
 .isotope .isotope-item {
+  z-index: 2;
   -webkit-transition-property: -webkit-transform, opacity;
      -moz-transition-property:    -moz-transform, opacity;
       -ms-transition-property:     -ms-transform, opacity;
        -o-transition-property:      -o-transform, opacity;
           transition-property:         transform, opacity;
+}
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1;
 }
 
 /**** disabling Isotope CSS3 transitions ****/

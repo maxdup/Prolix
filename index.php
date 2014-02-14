@@ -1,4 +1,6 @@
 <?php get_header()?>
+
+
 <script src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery-1.7.2.min.js" type="text/javascript"></script>
 <script src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery.isotope.min.js" type="text/javascript"></script>
 <div class="contentcontainer">
@@ -11,14 +13,24 @@
 					get_template_part( 'content-blogpost', get_post_format() );
 				}
 			endwhile;?> 
-	
-			</div>
+		</div>
+		
 		<script type="text/javascript">
+			$.urlParam = function(name){
+		    	  var results = new RegExp('[\\?&amp;]' + name + '=([^&;#]*)').exec(window.location.href);
+			  if (results != null){  	  
+				return '.' + results[1] || 0;
+			  }
+			    return '*';	
+			}
+
 			$(window).load(function() {
 			  var $container = $('#isotope');
+			  var selector = $.urlParam('filter');
 			  $container.isotope({
 				itemSelector: '.item',
-				layoutMode:'masonryHorizontal'
+				filter: selector,
+				layoutMode: 'masonryHorizontal'
 			  });
 			  $('#isotope').isotope({
   			    masonryHorizontal: {
@@ -26,18 +38,22 @@
 			    }
 			  });
 			  $('#isotope').isotope( 'shuffle' );
-			  $('#isotope').isotope( 'reLayout' );
+			  //$('#isotope').isotope( 'reLayout' );
 			});
-
+			$('.filter a').click(function(){
+			  var $container = $('#isotope');
+			  var selector = $(this).attr('data-filter');
+			  $container.isotope({ filter: selector });
+			  return false;
+			});
 		</script>
 	</div>
 	<script>	
-		
 		(function() {
     			function scrollHorizontally(e) {
         			e = window.event || e;
         			var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
-        			document.getElementById('contentwrapper').scrollLeft -= (delta*50); // Multiplied by 40
+        			document.getElementById('contentwrapper').scrollLeft -= (delta*50);
         			e.preventDefault();
     			}
     			if (document.getElementById('contentwrapper').addEventListener) {

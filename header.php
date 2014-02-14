@@ -27,7 +27,15 @@
 		</header>
 		<div class="site-description"><?php bloginfo( 'description' ); ?></div>
 		<nav>
-			<?php wp_nav_menu();?>
+		<?php
+			if(is_front_page()){
+				prolix_nav_menu_filter();				
+			}
+			else{
+				prolix_nav_menu();
+			}
+		?>
 		</nav>
 	<?php get_sidebar() ?>
 	</div>
+
