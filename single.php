@@ -1,10 +1,10 @@
  <?php get_header()?>
 
 <div id="contentvertical">
-	<div id="contentblogpost">
+	<div class="contentblogpost">
 		<?php while (have_posts()): the_post()?>
 			<h2><?php the_title()?></h2>
-			<?php echo get_the_author_link();?>
+			<?php echo '<div class="post-info">Posted by ',get_the_author_link() , ' on ', get_the_date(), '</div>';?> 
 			<?php the_content();?>
 			
 		<?php endwhile;?>
