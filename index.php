@@ -9,7 +9,11 @@
 			<?php while ( have_posts() ) : the_post();
 				if ( has_post_format( 'image' )) {
 					get_template_part( 'content-image', get_post_format() );
-				}else{
+				}
+				else if ( has_post_format( 'gallery' )) {
+					get_template_part( 'content-gallery', get_post_format() );
+				}
+				else{
 					get_template_part( 'content-blogpost', get_post_format() );
 				}
 			endwhile;?> 

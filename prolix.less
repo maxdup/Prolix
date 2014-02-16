@@ -242,6 +242,23 @@ h4 {
   z-index: 2;
 }
 
+.helper{
+    text-align:center; /* Align center inline elements */
+    font: 0/0 a;
+}
+.helper:before {
+    content: ' ';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+.slide{
+    vertical-align: middle;
+    display: inline-block;
+    max-height: 100%;
+    max-widht: 100%;
+}
+
 .item {
   float: left;
   background: #EEE;
@@ -326,6 +343,8 @@ div.aligncenter {
 .aligncenter {
     display: block;
     margin: 30px auto 30px auto;
+}
+a img{
 }
 
 a img.alignright {
