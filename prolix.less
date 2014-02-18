@@ -229,7 +229,6 @@ h4 {
 .isotope-item img {
 	width: 100%;
 	height: auto;
-	z-index:1;
  	display: block;
 }
 .item.portrait img {
@@ -243,21 +242,24 @@ h4 {
 }
 
 .helper{
-    text-align:center; /* Align center inline elements */
-    font: 0/0 a;
+    position: absolute;
+    top:40%;
+    text-align:center;
+    display: inline-block;
+}
+.helper-right{ 
+    .helper();
+    right: 15%;
+}
+.helper-left{
+    .helper();
+    left: 15%;
 }
 .helper:before {
-    content: ' ';
+
     display: inline-block;
-    height: 100%;
-    vertical-align: middle;
 }
-.slide{
-    vertical-align: middle;
-    display: inline-block;
-    max-height: 100%;
-    max-widht: 100%;
-}
+
 
 .item {
   float: left;

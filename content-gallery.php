@@ -10,9 +10,9 @@
 			foreach ($gallery as $image){
 			
 			echo '<div class="slide ',$active,'">';
-			echo    '<div class="helper"></div>',
+			echo    '<span class="helper"></span>',
 				//<a href="', $image, '" class="lightbox">*
-				'<img src="', $image, '" class="slide wp-image-96" />
+				'<img src="', $image, '" class="slideimg wp-image-96" />
 				',//</a>
 			'</div>';
 			if ($first){$active = ''; $first=false;}
@@ -20,8 +20,8 @@
 		}
 		?>
 		</div>
-		<a class="left carousel-control" href="#carousel-<?php echo get_the_title();?>" data-slide="prev">&lt;</a>
-		<a class="right carousel-control" href="#carousel-<?php echo get_the_title();?>" data-slide="next">&gt;</a>
+		<a class="left carousel-control" href="#carousel-<?php echo get_the_title();?>" data-slide="prev"><span class="helper-left">&lt;</span></a>
+		<a class="right carousel-control" href="#carousel-<?php echo get_the_title();?>" data-slide="next"><span class="helper-right">&gt;</span></a>
 	</div>
 
 	<header class="entry-header-index" style"color:#">
@@ -40,17 +40,3 @@
 		?>
 	</header><!-- .entry-header -->
 </div><!-- #post-## -->
-
-
-<!--
-
-<div class="slide active"><a href="http://farm8.staticflickr.com/7303/9735056118_ffa22ba050_o.jpg" class="lightbox"><img src="http://www.mdupuis.com/wp-content/uploads/2013/09/vanguard1.jpg" alt="vanguard1" class="alignnone size-medium wp-image-96" /></a></div>
-<div class="slide"><a href="http://farm8.staticflickr.com/7372/9731826747_206e862f8e_o.jpg" class="lightbox"><img src="http://www.mdupuis.com/wp-content/uploads/2013/09/vanguard2.jpg" alt="vanguard2" class="alignnone size-medium wp-image-97" /></a></div>
-<div class="slide"><a href="http://farm4.staticflickr.com/3737/9731844363_a24e5a26d8_o.jpg" class="lightbox"><img src="http://www.mdupuis.com/wp-content/uploads/2013/09/vanguard3.jpg" alt="vanguard3" class="alignnone size-medium wp-image-98" /></a></div>
-<div class="slide"><a href="http://farm8.staticflickr.com/7427/9731824787_cef15a82a6_o.jpg" class="lightbox"><img src="http://www.mdupuis.com/wp-content/uploads/2013/09/vanguard4.jpg" alt="vanguard4" class="alignnone size-medium wp-image-99" /></a></div>
-<div class="slide"><a href="http://farm6.staticflickr.com/5537/9731824279_c796b5e2c2_o.jpg" class="lightbox"><img src="http://www.mdupuis.com/wp-content/uploads/2013/09/vanguard5.jpg" alt="vanguard5" class="alignnone size-medium wp-image-100" /></a></div>
-</div>
-<a class="left carousel-control" href="#carousel-vanguard" data-slide="prev">&lt;</a>
-<a class="right carousel-control" href="#carousel-vanguard" data-slide="next">&gt;</a>
-</div></div>
--->
