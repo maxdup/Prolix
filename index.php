@@ -38,7 +38,7 @@
 			  });
 			  $('#isotope').isotope({
   			    masonryHorizontal: {
-				  rowHeight: 195
+				  rowHeight: 190
 			    }
 			  });
 			  $('#isotope').isotope( 'shuffle' );
