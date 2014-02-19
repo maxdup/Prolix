@@ -1,8 +1,5 @@
-<div id="post-<?php the_ID(); ?>" class="item <?php echo get_post_meta(get_the_ID(), 'dimension', True);
-	$category = get_the_category(); 
-	echo ' ', str_replace(' ', '', $category[0]->cat_name); 
-	?> isotope-item">
-
+<div id="post-<?php the_ID(); ?>" class="item <?php echo get_post_meta(get_the_ID(), 'dimension', True);$category = get_the_category(); echo ' ', str_replace(' ', '', $category[0]->cat_name); ?> isotope-item">
+	<a href="<?php echo get_permalink(); ?>">
 	<div class="carousel slide" id="carousel-<?php echo get_the_title();?>">
 		<div class="carousel-inner">
 		<?php 
@@ -25,7 +22,7 @@
 		</div>
 		<a class="left carousel-control" href="#carousel-<?php echo get_the_title();?>" data-slide="prev"><span class="helper-left">&lt;</span></a>
 		<a class="right carousel-control" href="#carousel-<?php echo get_the_title();?>" data-slide="next"><span class="helper-right">&gt;</span></a>
-	</div>
+	</div></a>
 
 	<header class="entry-header-index" style"color:#">
 		<?php if ( in_array( 'category', get_object_taxonomies( get_post_type() ) ) ) : ?>
