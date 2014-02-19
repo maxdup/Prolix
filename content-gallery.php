@@ -1,4 +1,7 @@
-<div id="post-<?php the_ID(); ?>" class="item <?php echo get_post_meta(get_the_ID(), 'dimension', True); $category = get_the_category(); echo ' ', str_replace(' ', '', $category[0]->cat_name);?> isotope-item">
+<div id="post-<?php the_ID(); ?>" class="item <?php echo get_post_meta(get_the_ID(), 'dimension', True);
+	$category = get_the_category(); 
+	echo ' ', str_replace(' ', '', $category[0]->cat_name); 
+	?> isotope-item">
 
 	<div class="carousel slide" id="carousel-<?php echo get_the_title();?>">
 		<div class="carousel-inner">
@@ -12,7 +15,7 @@
 			echo '<div class="slide ',$active,'">';
 			echo    '<span class="helper"></span>',
 				//<a href="', $image, '" class="lightbox">*
-				'<img src="', $image, '" class="slideimg" />
+				'<img src="', $image, '" class="slideimg wp-image-96" />
 				',//</a>
 			'</div>';
 			if ($first){$active = ''; $first=false;}
