@@ -16,8 +16,10 @@ add_action( 'after_setup_theme', 'prolix_theme_setup' );
 register_nav_menus( array( $location => $description ) );
 
 function prolix_nav_menu_filter(){
+	//refactor? https://gist.github.com/hitautodestruct/4345363
+
 	$args = array( 'order' => 'ASC', 'orderby' => 'menu_order', 'post_type' => 'nav_menu_item',
-	'post_status' => 'publish', 'output' => ARRAY_A, 'output_key' => 'menu_order', 'nopaging' => true );
+	'post_status' => 'publish', 'output' => ARRAY_A, 'output_key' => 'menu_order', 'nopaging' => true 		);
 	$items = wp_get_nav_menu_items( 'indexmenu' ,$args); //todo make indexmenu not hard coded 
 	echo '<div class="menu-indexmenu-container">';
 	echo '<ul id="menu-', 'indexmenu', '" class="menu"> <li>';

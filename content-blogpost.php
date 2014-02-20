@@ -1,5 +1,5 @@
-<div id="post-<?php the_ID(); ?>" class="item <?php echo get_post_meta(get_the_ID(), 'dimension', True);$category = get_the_category(); echo ' ', str_replace(' ', '', $category[0]->cat_name); ?> isotope-item">
-	<a href="<?php echo get_permalink(); ?>">	
+<div id="post-<?php the_ID(); ?>" class="item blogpost <?php echo get_post_meta(get_the_ID(), 'dimension', True);$category = get_the_category(); echo ' ', str_replace(' ', '', $category[0]->cat_name); ?> isotope-item">
+	<a href="<?php echo get_permalink(); ?>">
 	<?php if ( has_post_thumbnail() ) {
 
 		//the_post_thumbnail();
@@ -25,4 +25,13 @@
 			endif;
 		?>
 	</header><!-- .entry-header -->
+	<div class="blogpostpreview">
+		<div class="blogpostpreviewtextwrapper">
+			<div class="blogpostpreviewtextbg">
+				<div class="blogpostpreviewtext">
+					<?php the_content(); ?>
+				</div>
+			</div>
+		</div>
+	</div>
 </div><!-- #post-## -->

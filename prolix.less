@@ -35,6 +35,7 @@ body {
 .content{
 	height:100%;
 	margin: 30px;
+	padding-right: 20px;
 }
 #contentvertical{
 	margin-left: 200px;
@@ -286,6 +287,59 @@ h4 {
 .item.h2 { height:(@isoitem * 2) + @isopad; }
 .item.w3 { width: (@isoitem * 3) + (@isopad * 2);}
 .item.h3 { height:(@isoitem * 3) + (@isopad * 2);}
+.item.w4 { width: (@isoitem * 4) + (@isopad * 3);}
+.item.h4 { height:(@isoitem * 4) + (@isopad * 3);}
+
+.big .blogpostpreview{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height:100%;
+	width:100%;
+	
+}
+.blogpostpreviewtextwrapper{
+	position: relative;
+	padding-top: 159px;
+	height:100%;
+	
+	
+	
+}
+.blogpostpreviewtextbg{
+	height: 100%;
+	
+background: -moz-linear-gradient(top,  rgba(255,255,255,0) 0%, rgba(255,255,255,0.75) 5%, rgba(255,255,255,0.87) 12%, rgba(255,255,255,1) 40%, rgba(255,255,255,1) 99%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(5%,rgba(255,255,255,0.75)), color-stop(12%,rgba(255,255,255,0.87)), color-stop(40%,rgba(255,255,255,1)), color-stop(99%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,0.75) 5%,rgba(255,255,255,0.87) 12%,rgba(255,255,255,1) 40%,rgba(255,255,255,1) 99%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,0.75) 5%,rgba(255,255,255,0.87) 12%,rgba(255,255,255,1) 40%,rgba(255,255,255,1) 99%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,0.75) 5%,rgba(255,255,255,0.87) 12%,rgba(255,255,255,1) 40%,rgba(255,255,255,1) 99%); /* IE10+ */
+background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(255,255,255,0.75) 5%,rgba(255,255,255,0.87) 12%,rgba(255,255,255,1) 40%,rgba(255,255,255,1) 99%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+
+}
+.blogpostpreviewtext{
+	overflow: hidden;
+	height:100%;
+	padding: 30px;
+	border-left: 3px solid #eee;
+	border-right: 3px solid #eee;
+
+
+}
+
+.gallery.big{
+	.item.h2();
+	.item.w3();
+}
+.blogpost.big{
+	height: 80%;
+	border-bottom: 3px solid #eee;
+	.item.w2();
+}
+.image.big{
+
+}
 
 /**** Isotope CSS3 transitions ****/
 
@@ -305,7 +359,6 @@ h4 {
        -o-transition-property: height, width;
           transition-property: height, width;
 	height:	100%;
-	color:pink;
 }
 
 .isotope .isotope-item {

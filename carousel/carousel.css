@@ -26,6 +26,7 @@ a.carousel-control  {
 }
 .slide{
     position: absolute;
+	background: black;
     vertical-align: middle;
     display: inline-block;
     max-width: 100%;

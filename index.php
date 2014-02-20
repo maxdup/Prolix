@@ -18,11 +18,11 @@
 				}
 			endwhile;?> 
 		</div>
-		
 		<script type="text/javascript">
 			$.urlParam = function(name){
 		    	  var results = new RegExp('[\\?&amp;]' + name + '=([^&;#]*)').exec(window.location.href);
 			  if (results != null){  	  
+				$('.item').addClass('big');
 				return '.' + results[1] || 0;
 			  }
 			    return '*';	
@@ -45,9 +45,18 @@
 			  //$('#isotope').isotope( 'reLayout' );
 			});
 			$('.filter a').click(function(){
-			  var $container = $('#isotope');
-			  var selector = $(this).attr('data-filter');
-			  $container.isotope({ filter: selector });
+				var $container = $('#isotope');
+				var selector = $(this).attr('data-filter');
+				$container.isotope({ filter: selector });
+				//js fun, implement later
+				if (selector != '*'){
+					$('.item').addClass('big');
+					$container.isotope('reLayout');
+   			  	}else{
+					$('.item').removeClass('big');
+					$container.isotope('reLayout');
+      			}
+				
 			  return false;
 			});
 		</script>
