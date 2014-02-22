@@ -48,13 +48,14 @@
 				var $container = $('#isotope');
 				var selector = $(this).attr('data-filter');
 				$container.isotope({ filter: selector });
-				//js fun, implement later
 				if (selector != '*'){
 					$('.item').addClass('big');
 					$container.isotope('reLayout');
+					$container.isotope({ sortBy : 'sort' });
    			  	}else{
 					$('.item').removeClass('big');
 					$container.isotope('reLayout');
+					$container.isotope({ sortBy : 'random'});
       			}
 				
 			  return false;
