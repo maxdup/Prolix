@@ -34,7 +34,7 @@ $('.filter a').click(function(){
   	}else{
 		$('.item').removeClass('big');
 		$container.isotope('reLayout');
-		$container.isotope({ sortBy : 'random'});
+		$container.isotope({ sortBy : 'sort'});
 	}
 	
   return false;

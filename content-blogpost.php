@@ -26,13 +26,19 @@
 			endif;
 		?>
 	</header><!-- .entry-header -->
+	<a class="linkcontainer" href="<?php echo get_permalink(); ?>">
 	<div class="blogpostpreview">
 		<div class="blogpostpreviewtextwrapper">
 			<div class="blogpostpreviewtextbg">
 				<div class="blogpostpreviewtext">
+					<p align="right"><?php echo get_the_date(); ?></p>
 					<?php the_excerpt(); ?>
 				</div>
 			</div>
 		</div>
+		<div class="readmore">
+			<a href="<?php echo get_permalink(); ?>">read more</a>
+		</div>
 	</div>
+	</a>
 </div><!-- #post-## -->
