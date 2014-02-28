@@ -217,14 +217,39 @@ h4 {
 
 .entry-header-index {
 	position: absolute;
-	top: 0;
+	bottom: 6px;
 	left: 0;
-	padding: 4px 4px 4px 8px; 
+	max-width: 158px;
+	padding: 4px 8px 4px 8px; 
+  	//margin: 98px 6px 0px 0px;
+	background: white;
+	opacity:0.9;
+}
+.big.blogpost .entry-header-index{
+	position: absolute;
+	top: 0;
+	bottom: initial;
+	max-width: 90%;
+	padding: 4px 8px 4px 8px; 
   	margin: 98px 6px 0px 0px;
 	background: white;
 	opacity:0.9;
 }
 
+.carouselgallery{
+    position:relative;
+    height:332px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.carouselgallery img{
+    height:auto;
+    width:100%;
+}
+.carouselgallery img.portrait{
+    height:100%;
+    width:auto;
+}
 
 .isotope-item {
 	overflow: hidden;
@@ -263,20 +288,6 @@ h4 {
 .helper:before {
     display: inline-block;
 }
-.carouselgallery{
-    position:relative;
-    height:332px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-.carouselgallery img{
-    height:auto;
-    width:100%;
-}
-.carouselgallery img.portrait{
-    height:100%;
-    width:auto;
-}
 
 .item {
   float: left;
@@ -293,6 +304,12 @@ h4 {
 .item.w4 { width: (@isoitem * 4) + (@isopad * 3);}
 .item.h4 { height:(@isoitem * 4) + (@isopad * 3);}
 
+.big {
+	margin-top: 2%;
+	height: 75%;
+	min-height: (@isoitem * 2) + @isopad;
+}
+
 .big .blogpostpreview{
 	position: absolute;
 	top: 0;
@@ -307,6 +324,7 @@ h4 {
 	left: 0;
 	right: 0;
 	bottom: 0;
+	overflow: hidden;
 	border-left: 3px solid #eee;
 	border-right: 3px solid #eee;
 	border-bottom: 3px solid #eee;
@@ -337,15 +355,21 @@ h4 {
 }
 
 .gallery.big{
-	.item.h2();
 	.item.w3();
 }
+.gallery.big .gallerytextwrapper{
+	position: absolute;
+	top:300px;
+	left: 0;
+	bottom:0;
+	overflow: hidden;
+	background: white;
+	border-left: 3px solid #eee;
+	border-right: 3px solid #eee;
+	border-bottom: 3px solid #eee;
+}
 .blogpost.big{
-	margin-top: 2%;
-	height: 80%;
 	.item.w2();
-	min-height: (@isoitem * 2) + @isopad;
-	
 }
 .big .readmore{
 	position: absolute;
@@ -356,6 +380,7 @@ h4 {
 	text-align: center;
 	color: @ineffable;
 	font-size: 20px;
+	margin: 3px;
 	background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 30%, rgba(255,255,255,1) 100%); /* FF3.6+ */
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(30%,rgba(255,255,255,1)), color-stop(100%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
 	background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 30%,rgba(255,255,255,1) 100%); /* Chrome10+,Safari5.1+ */
@@ -363,21 +388,16 @@ h4 {
 	background: -ms-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 30%,rgba(255,255,255,1) 100%); /* IE10+ */
 	background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 30%,rgba(255,255,255,1) 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
-	
-	border-left: 3px solid #eee;
-	border-right: 3px solid #eee;
-	border-bottom: 3px solid #eee;
 }
 
 .readmore a{
 	text-decoration: none;
 	position: relative;
-	top: 30px;
+	top: 35px;
 }
 
 .image.big{
-	margin-top: 2%;
-	height: 70%;
+	.big();
 	width: auto;
 }
 .image.big img{

@@ -21,11 +21,11 @@
 		}
 		?>
 		</div>
-		<a class="left carousel-control" href="#carousel-<?php echo get_the_title();?>" data-slide="prev"><span class="helper-left">&lt;</span></a>
-		<a class="right carousel-control" href="#carousel-<?php echo get_the_title();?>" data-slide="next"><span class="helper-right">&gt;</span></a>
-	</div></a>
-
-	<header class="entry-header-index" style"color:#">
+		<a class="left carousel-control" href="#carousel-<?php echo get_the_title();?>" 
+				data-slide="prev"><span class="helper-left">&lt;</span></a>
+		<a class="right carousel-control" href="#carousel-<?php echo get_the_title();?>" 
+				data-slide="next"><span class="helper-right">&gt;</span></a>
+		<header class="entry-header-index" style"color:#">
 		<?php if ( in_array( 'category', get_object_taxonomies( get_post_type() ) ) ) : ?>
 		<div class="entry-meta">
 			<span class="categ"><?php echo get_the_category_list( _x( ', ', 'Used between list items, there is a space after the comma.', 'twentyfourteen' ) ); ?></span>
@@ -39,5 +39,15 @@
 				the_title( '<h1 class="entry-title-index"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h1>' );
 			endif;
 		?>
-	</header><!-- .entry-header -->
+	</header>
+	</div></a>
+	<div class="gallerytextwrapper">
+		<div class="blogpostpreviewtext">
+			<p align="right"><?php echo get_post_meta(get_the_ID(), 'subtitle', True); ?></p>
+			<p><?php echo strip_shortcodes(get_the_content()); ?></p>
+		</div>
+	</div>
+	<div class="readmore">
+				<a href="<?php echo get_permalink(); ?>">read more</a>
+			</div>
 </div><!-- #post-## -->
