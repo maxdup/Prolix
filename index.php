@@ -1,7 +1,5 @@
 <?php get_header()?>
 
-
-<script src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery-1.7.2.min.js" type="text/javascript"></script>
 <script src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery.isotope.min.js" type="text/javascript"></script>
 <div class="contentcontainer">
 	<div id="contentwrapper">
@@ -37,7 +35,20 @@
         			// IE 6/7/8
         			document.getElementById('contentwrapper').attachEvent("onmousewheel", scrollHorizontally);
     			}
-		})();		
+		})();
+
+		$(document).ready(function() {
+
+			$('.lightbox').magnificPopup({
+				type: 'image',
+				closeOnContentClick: true,
+				mainClass: 'mfp-img-mobile',
+				image: {
+					verticalFit: true
+				}
+		
+			});
+		});
 	</script>
 </div>
 <?php get_footer()?>
