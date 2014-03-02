@@ -11,6 +11,9 @@
 				else if ( has_post_format( 'gallery' )) {
 					get_template_part( 'content-gallery', get_post_format() );
 				}
+				else if ( has_post_format( 'link' )){
+					get_template_part( 'content-link', get_post_format() );				
+				}
 				else{
 					get_template_part( 'content-blogpost', get_post_format() );
 				}

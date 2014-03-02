@@ -6,7 +6,7 @@ function prolix_theme_setup() {
 	/* Add theme-supported features. */
 	add_theme_support( 'post-thumbnails' );
 	add_theme_support( 'post-formats', array('image', 'video', 'link', 'gallery') );
-	/* implement later: status/quote/link */
+	/* implement later: status/quote */
 }
 endif;
 
