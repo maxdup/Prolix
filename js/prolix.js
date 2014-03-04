@@ -34,11 +34,13 @@ $('.filter a').click(function(){
 	$container.isotope({ filter: selector });
 	if (selector != '*'){
 		$('.item').addClass('big');
+		$('.heightVar').addClass('big');
 		$container.isotope({ sortBy : 'sort' });
 		$container.isotope({ layoutMode: 'straightAcross' });
 		$container.isotope('reLayout');
   	}else{
 		$('.item').removeClass('big');
+		$('.heightVar').removeClass('big');
 		$container.isotope({ sortBy : 'random'});
 		$container.isotope({ layoutMode: 'masonryHorizontal' });
 		$('#isotope').isotope({
