@@ -26,22 +26,16 @@ function prolix_nav_menu_filter(){
 	foreach($items as $menu){
 		
 		if ($menu->type_label == 'Category'){
-			echo '<li><div class="filter"><a href="#" data-filter=".',
+			echo '<li><div class="filter"><a href="',$menu->url,'" data-filter=".',
 				str_replace(' ', '',$menu->title), '">',
 				$menu->title, '</a></div></li>';
 		}
 		else{
-			if ($menu->type_label == 'Custom' and $menu->url == is_front_page()){
-				 echo '<li><div class="filter"><a href="#" data-filter="*">',
-				$menu->title, '</a></div></li>';
-			}
-			else{
-				echo '<li id="menu-item-',$menu->ID,'" 
-				class="menu-item menu-item-type-', $menu->type ,
-				' menu-item-object-', $menu->object ,
-				' menu-item-', $menu->ID,'" >
-				<a href="', $menu->url, '">', $menu->title,'</a></li>';
-			}
+			echo '<li id="menu-item-',$menu->ID,'" 
+			class="menu-item menu-item-type-', $menu->type ,
+			' menu-item-object-', $menu->object ,
+			' menu-item-', $menu->ID,'" >
+			<a href="', $menu->url, '">', $menu->title,'</a></li>';
 		}
 	}
 	echo '</ul>';
