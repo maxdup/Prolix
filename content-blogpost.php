@@ -1,4 +1,4 @@
-<div id="post-<?php the_ID(); ?>" class="item blogpost <?php if (is_category()): echo 'big'; endif;  echo get_post_meta(get_the_ID(), 'dimension', True);$category = get_the_category(); echo ' ', str_replace(' ', '', $category[0]->cat_name); ?> isotope-item">
+<div id="post-<?php the_ID(); ?>" class="item blogpost <?php if (is_category()): echo 'big '; endif;  echo get_post_meta(get_the_ID(), 'dimension', True);$category = get_the_category(); echo ' ', str_replace(' ', '', $category[0]->cat_name); ?> isotope-item">
 	<div hidden class="sort"><?php the_date('Ymd') ?></div>
 	<a href="<?php echo get_permalink(); ?>">
 	<?php if ( has_post_thumbnail() ) {

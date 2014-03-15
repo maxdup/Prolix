@@ -26,7 +26,7 @@ module.exports = function(grunt) {
 	concat: {
 options: {
       	stripBanners: true,
-      		banner: '/* all changes made here will be overwritten eventually*/'
+      		banner: '/* all changes made here */'
     	},
 		js: {	
 			src: ['js/jquery-1.7.2.min.js',

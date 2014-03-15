@@ -1,4 +1,4 @@
-<div id="post-<?php the_ID(); ?>" class="item gallery <?php echo get_post_meta(get_the_ID(), 'dimension', True);$category = get_the_category(); echo ' ', str_replace(' ', '', $category[0]->cat_name); ?> isotope-item">
+<div id="post-<?php the_ID(); ?>" class="item gallery <?php if (is_category()): echo 'big '; endif; echo get_post_meta(get_the_ID(), 'dimension', True);$category = get_the_category(); echo ' ', str_replace(' ', '', $category[0]->cat_name); ?> isotope-item">
 	
 	<div class="carousel slide" id="carousel-<?php echo get_the_title();?>">
 		<a href="<?php echo get_permalink(); ?>">

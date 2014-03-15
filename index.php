@@ -3,7 +3,7 @@
 <script src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery.isotope.min.js" type="text/javascript"></script>
 <div class="contentcontainer">
 	<div id="contentwrapper">
-		<div class="heightVar">
+		<div class="heightVar <?php if(is_category()): echo 'big'; endif; ?>">
 			<div id="isotope" class="content">
 				<?php while ( have_posts() ) : the_post();
 					if ( has_post_format( 'image' )) {
