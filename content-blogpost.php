@@ -36,9 +36,9 @@
 				</div>
 			</div>
 		</div>
-		<div class="readmore">
-			<a href="<?php echo get_permalink(); ?>">read more</a>
-		</div>
+	</div>
+	<div class="readmore">
+		<a href="<?php echo get_permalink(); ?>">read more</a>
 	</div>
 	</a>
 </div><!-- #post-## -->

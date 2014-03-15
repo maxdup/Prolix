@@ -4,7 +4,6 @@ a.carousel-control  {
 }
 .carousel {
   position: relative;
-  margin-bottom: 18px;
   line-height: 1;
   width: 100%;
   height: 100%;
@@ -26,7 +25,7 @@ a.carousel-control  {
 }
 
 .slide{
-    position: absolute;
+    position: relative;
 	background: black;
     vertical-align: middle;
     display: inline-block;
@@ -35,7 +34,7 @@ a.carousel-control  {
 }
 
 .big .slide{
-    position: absolute;
+    position: relative;
 	background: black;
     vertical-align: middle;
     display: inline-block;
