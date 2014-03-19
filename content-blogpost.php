@@ -1,16 +1,15 @@
 <div id="post-<?php the_ID(); ?>" class="item blogpost <?php if (is_category()): echo 'big '; endif;  echo get_post_meta(get_the_ID(), 'dimension', True);$category = get_the_category(); echo ' ', str_replace(' ', '', $category[0]->cat_name); ?> isotope-item">
 	<div hidden class="sort"><?php the_date('Ymd') ?></div>
 	<a href="<?php echo get_permalink(); ?>">
+	<div class="thumb">
 	<?php if ( has_post_thumbnail() ) {
 
 		//the_post_thumbnail();
 		$thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'your_thumb_handle' );
 		?><img src="<?php echo $thumbnail['0']; ?>" /><?php
-	}else{
-		echo'<div style="height:100%; width:100%;"/></div>';
 	}?>
+	</div>
 	</a>
-
 	<header class="entry-header-index" style"color:#">
 		<?php if ( in_array( 'category', get_object_taxonomies( get_post_type() ) ) ) : ?>
 		<div class="entry-meta">
