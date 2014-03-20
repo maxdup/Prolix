@@ -25,10 +25,15 @@
 				data-slide="prev"><span class="helper-left">&lt;</span></a>
 		<a class="right carousel-control" href="#carousel-<?php echo get_the_title();?>" 
 				data-slide="next"><span class="helper-right">&gt;</span></a>
-		<header class="entry-header-index" style"color:#">
+		<header class="entry-header-index">
 		<?php if ( in_array( 'category', get_object_taxonomies( get_post_type() ) ) ) : ?>
 		<div class="entry-meta">
-			<span class="categ"><?php echo get_the_category_list( _x( ', ', 'Used between list items, there is a space after the comma.', 'twentyfourteen' ) ); ?></span>
+			<span class="categ">
+				<div class="filter">
+					<?php $cats = get_the_category(); ?>
+					<a href="<?php echo get_category_link($cats[0]->cat_ID)?>" data-filter=".<?php echo str_replace(' ', '',$cats[0]->cat_name); ?>"><?php echo $cats[0]->cat_name; ?></a>
+				</div>
+			</span>
 		</div>
 		<?php 
 			endif;

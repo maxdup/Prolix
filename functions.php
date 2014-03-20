@@ -13,7 +13,6 @@ endif;
 
 
 add_action( 'after_setup_theme', 'prolix_theme_setup' );
-register_nav_menus( array( $location => $description ) );
 
 function prolix_nav_menu_filter(){
 	//refactor? https://gist.github.com/hitautodestruct/4345363
