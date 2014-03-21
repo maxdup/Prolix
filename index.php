@@ -1,6 +1,4 @@
 <?php get_header()?>
-
-<script src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery.isotope.min.js" type="text/javascript"></script>
 <div class="contentcontainer">
 	<div id="contentwrapper">
 		<div class="heightVar <?php if(is_category()): echo 'big'; endif; ?>">
@@ -21,7 +19,7 @@
 				endwhile;?> 
 			</div>
 		</div>
-		<script src="<?php bloginfo('stylesheet_directory'); ?>/js/prolix.js" type="text/javascript"></script>
 	</div>
+	<script src="<?php bloginfo('stylesheet_directory'); ?>/js/horiscroll.js" type="text/javascript"></script>
 </div>
 <?php get_footer()?>
