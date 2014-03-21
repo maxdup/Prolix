@@ -24,7 +24,7 @@ module.exports = function(grunt) {
       	}
     },
 	concat: {
-options: {
+		options: {
       	stripBanners: true,
       		banner: '/* all changes made here will be overwritten eventually*/'
     	},
@@ -33,14 +33,15 @@ options: {
 			'carousel/transition.js',
 			'carousel/carousel.js',
 			'js/jquery.isotope.min.js',
-			'js/prolix.js',
-			'jquery.magnific-popup.min.js'],	
+			'lightbox/jquery.magnific-popup.min.js',
+			'js/prolix.js'
+			],
 			dest: 'concat.js',
 		},
 		css: {
 			src: ['style.css',
 			'carousel/carousel.css',
-			'carousel/magnific-popup.css'
+			'lightbox/magnific-popup.css'
 			],
 			dest: 'concat.css',		
 		},
