@@ -9,7 +9,7 @@
 			
 		<?php endwhile;?>
 
-		<?php comments_template('', true);?>
+		<?php comments_template();?>
 	<div>
 </div>
 
