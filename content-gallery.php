@@ -46,14 +46,12 @@
 		?>
 	</header>
 	</div></a>
-	<a class="linkcontainer" href="<?php echo get_permalink(); ?>">
 	<div class="gallerytextwrapper">
 		<div class="blogpostpreviewtext">
 			<p align="right"><?php echo get_post_meta(get_the_ID(), 'subtitle', True); ?></p>
 			<p><?php echo strip_shortcodes(get_the_content()); ?></p>
 		</div>
 	</div>
-	</a>
 	<div class="readmore">
 				<a href="<?php echo get_permalink(); ?>">read more</a>
 			</div>

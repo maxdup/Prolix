@@ -20,6 +20,5 @@
 			</div>
 		</div>
 	</div>
-	<script src="<?php bloginfo('stylesheet_directory'); ?>/js/horiscroll.js" type="text/javascript"></script>
 </div>
 <?php get_footer()?>

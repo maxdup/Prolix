@@ -15,3 +15,27 @@
 			document.getElementById('contentwrapper').attachEvent("onmousewheel", scrollHorizontally);
 		}
 })();
+$('.filter a').click(function(){
+	var $container = $('#isotope');
+	var selector = $(this).attr('data-filter');
+	$container.isotope({ filter: selector });
+	if (selector != '*'){
+		$('.item').addClass('big');
+		$('.heightVar').addClass('big');
+		$container.isotope({ sortBy : 'sort' });
+		$container.isotope({ layoutMode: 'straightAcross' });
+		$container.isotope('reLayout');
+  	}else{
+		$('.item').removeClass('big');
+		$('.heightVar').removeClass('big');
+		$container.isotope({ sortBy : 'random'});
+		$container.isotope({ layoutMode: 'masonryHorizontal' });
+		$('#isotope').isotope({
+    		masonryHorizontal: {
+	  			rowHeight: 190
+    		}
+  		});
+		$container.isotope('reLayout');
+	}
+  return false;
+});

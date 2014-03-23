@@ -29,6 +29,10 @@ function prolix_nav_menu_filter(){
 				str_replace(' ', '',$menu->title), '">',
 				$menu->title, '</a></div></li>';
 		}
+		else if ($menu->type_label == 'Custom'){
+			echo '<li><div class="filter"><a href="',$menu->url,'" data-filter="*">',
+				$menu->title, '</a></div></li>';
+		}
 		else{
 			echo '<li id="menu-item-',$menu->ID,'" 
 			class="menu-item menu-item-type-', $menu->type ,
