@@ -32,7 +32,6 @@ module.exports = function(grunt) {
 			src: ['js/jquery-1.7.2.min.js',
 			'carousel/transition.js',
 			'carousel/carousel.js',
-			'js/jquery.isotope.min.js',
 			'lightbox/jquery.magnific-popup.min.js',
 			'js/prolix.js'
 			],
