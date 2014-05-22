@@ -31,6 +31,9 @@ $(window).load(function() {
 	$container.isotope({ layoutMode: 'straightAcross' });
   }
 
+  $('.lightbox').imagefill();
+  $('.thumb').imagefill();
+
   // horizontal scrolling
   function scrollHorizontally(e) {
 			e = window.event || e;
