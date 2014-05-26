@@ -19,9 +19,9 @@ $(window).load(function() {
 	layoutMode: 'masonryHorizontal'
   }); 
   $('#isotope').isotope({
-    masonryHorizontal: {
+	masonryHorizontal: {
 	  rowHeight: 190
-    }
+	}
   });
   
   $('#isotope').isotope( 'shuffle' );
@@ -31,8 +31,8 @@ $(window).load(function() {
 	$container.isotope({ layoutMode: 'straightAcross' });
   }
 
-  $('.lightbox').imagefill();
-  $('.thumb').imagefill();
+  $('.lightbox').imagefill({runOnce:true});
+  $('.thumb').imagefill({runOnce:true});
 
   // horizontal scrolling
   function scrollHorizontally(e) {
@@ -57,24 +57,28 @@ $(window).load(function() {
 	var selector = $(this).attr('data-filter');
 	$container.isotope({ filter: selector });
 	if (selector != '*'){
-		$('.item').addClass('big');
-		$('.heightVar').addClass('big');
-		$container.isotope({ sortBy : 'sort' });
-		$container.isotope({ layoutMode: 'straightAcross' });
-		$container.isotope('reLayout');
+	  $('.item').addClass('big');
+	  $('.heightVar').addClass('big');
+	  $container.isotope({ sortBy : 'sort' });
+	  $container.isotope({ layoutMode: 'straightAcross' });
+	  $container.isotope('reLayout');
+
   	}else{
-		$('.item').removeClass('big');
-		$('.heightVar').removeClass('big');
-		$container.isotope({ sortBy : 'random'});
-		$container.isotope({ layoutMode: 'masonryHorizontal' });
-		$('#isotope').isotope({
-    		masonryHorizontal: {
-	  			rowHeight: 190
-    		}
-  		});
-		$container.isotope('reLayout');
+	  $('.item').removeClass('big');
+	  $('.heightVar').removeClass('big');
+	  $container.isotope({ sortBy : 'random'});
+	  $container.isotope({ layoutMode: 'masonryHorizontal' });
+	  $('#isotope').isotope({
+		masonryHorizontal: {
+		  rowHeight: 190
+		}
+	  });
+	  $container.isotope('reLayout');
 	}
-  return false;
+	$('.lightbox').imagefill({runOnce:true});
+	$('.thumb').imagefill({runOnce:true});
+
+	return false;
   });
 });
 
