@@ -277,7 +277,6 @@ $(window).load(function() {
 	$container.isotope({ layoutMode: 'straightAcross' });
   }
 
-  $('.lightbox').imagefill({runOnce:true});
   $('.thumb').imagefill({runOnce:true});
 
   // horizontal scrolling
@@ -321,7 +320,6 @@ $(window).load(function() {
 	  });
 	  $container.isotope('reLayout');
 	}
-	$('.lightbox').imagefill({runOnce:true});
 	$('.thumb').imagefill({runOnce:true});
 
 	return false;
@@ -329,14 +327,12 @@ $(window).load(function() {
 });
 
 $(document).ready(function() {
-
-	$('.lightbox').magnificPopup({
-		type: 'image',
-		closeOnContentClick: true,
-		mainClass: 'mfp-img-mobile',
-		image: {
-			verticalFit: true
-		}
-
-	});
+  $('.lightbox').magnificPopup({
+	type: 'image',
+	closeOnContentClick: true,
+	mainClass: 'mfp-img-mobile',
+	image: {
+	  verticalFit: true
+	}
+  });
 });

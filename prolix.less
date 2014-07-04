@@ -353,7 +353,7 @@ h4 {
 .big {
 	height: 100%;
 	min-height: (@isoitem * 2) + @isopad;
-	
+
 	.blogpostpreview {
 		position: relative;
 		top: -370px;
@@ -426,6 +426,7 @@ h4 {
     /* IE6-9 */
 }
 
+
 .blogpostpreviewtext {
 	overflow: hidden;
 	height: 100%;
@@ -457,6 +458,10 @@ h4 {
 	}
 }
 
+.sort{
+	display: none;
+}
+
 .blogpost.big {
 	.item.w2();
 
@@ -475,11 +480,6 @@ h4 {
 	}
 }
 
-.thumb {
-	width: 100%;
-	height: 100%;
-}
-
 .big {
 
 	.thumb {
@@ -487,6 +487,14 @@ h4 {
 		width: auto;
 	}
 
+	.lightbox.thumb{
+		height: 100%;
+		width: auto;
+	}
+	.lightbox img{
+		height: 100%;
+		width: auto;
+	}
 	.readmore {
 		position: relative;
 		left: 0;
@@ -700,7 +708,7 @@ a {
 		padding: 0;
 	}
 }
-.lightbox{
+.thumb{
 	height: 100%;
 	width: 100%;
 	cursor: pointer;

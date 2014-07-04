@@ -3,9 +3,9 @@
 		$thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'your_thumb_handle' );
 		$url = wp_get_attachment_url(get_post_thumbnail_id($post->ID, 'thumbnail'));
 		if( empty( $post->post_content) ) :
-			echo '<div class="lightbox" href="', $url,'"><img src="', $thumbnail['0'], '"/></div>';
+			echo '<div class="lightbox thumb" href="', $url,'"><img src="', $thumbnail['0'], '"/></div>';
 		else:
-			echo '<div class="lightbox" href="', $url,'" title="', get_the_content(), '"><img src="', $thumbnail['0'], '"/></div>';
+			echo '<div class="lightbox thumb" href="', $url,'" title="', get_the_content(), '"><img src="', $thumbnail['0'], '"/></div>';
 		endif;
 	endif; ?>
 </div><!-- #post-## -->
