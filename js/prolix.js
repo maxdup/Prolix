@@ -13,6 +13,7 @@ $(window).load(function() {
   //isotope init
   var $container = $('#isotope');
   var $selector = $.urlParam('filter');
+  var $biggies = [];
   $container.isotope({
 	itemSelector: '.item',
 	filter: $selector,
@@ -24,7 +25,6 @@ $(window).load(function() {
 	}
   });
   
-  $('#isotope').isotope( 'shuffle' );
   if ($selector != '*'){
 	$('.heightVar').addClass('big');
 	$container.isotope({ sortBy : 'sort'});
@@ -77,6 +77,24 @@ $(window).load(function() {
 	$('.thumb').imagefill({runOnce:true});
 
 	return false;
+  });
+
+  $('.thumb').click(function(){
+    if ($(this).parent().hasClass('big')){
+      var wasbig = true
+    }
+
+    for (i=0; i < $biggies.length; i++){
+      $biggies[i].removeClass('big');
+    }
+    $biggies = [];
+    if (!wasbig){
+      console.log('ading')
+      $(this).parent().addClass('big');
+      $biggies.push($(this).parent());
+    }
+    $container.isotope('reLayout');
+	$('.thumb').imagefill({runOnce:true});
   });
 });
 

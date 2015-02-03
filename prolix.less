@@ -193,22 +193,12 @@ ul {
 h1 {
 	font-size: 20px;
 	font-weight: bold;
-	line-height: 0px;
 	margin-top: 0;
+    line-height: 24px;
 }
 .title a, .title a:hover, .title a:link, .title a:visited{
 	color: white;
 	text-decoration: none;
-}
-.dax {
-	color: white;
-	opacity: 0.06;
-	line-height: 150%;
-	-moz-transform: scale(1, -1);
-	-webkit-transform: scale(1, -1);
-	-o-transform: scale(1, -1);
-	-ms-transform: scale(1, -1);
-	transform: scale(1, -1);
 }
 h2 {
 	font-size: 1.5em;
@@ -237,25 +227,22 @@ h4 {
 }
 
 .entry-title-index {
-	font-size: 14px;
-	font-weight: 300;
-	line-height: 1.0909090909;
-	margin-bottom: 12px;
-	margin: 0 0 8px 0;
+	font-weight: 900;
 	text-transform: uppercase;
-
 	a {
-		font-size: 12px;
-		color: #2b2b2b;
+		font-size: 14px;
+		color: @ineffable;
 		text-decoration: none;
 	}
-
-	a:hover{
+	a:hover {
 		color: @ineffable;
 	}
+
 }
 
 .entry-header-index {
+
+    display: none;
 	position: relative;
 	bottom: 78px;
 	left: 0;
@@ -354,6 +341,18 @@ h4 {
 	height: 100%;
 	min-height: (@isoitem * 2) + @isopad;
 
+    .entry-header-index {
+        display: block;
+	    position: relative;
+	    bottom: 78px;
+	    left: 0;
+	    max-width: 158px;
+	    padding: 4px 8px 4px 8px; 
+	    background: white;
+	    opacity: 0.9;
+    }
+
+
 	.blogpostpreview {
 		position: relative;
 		top: -370px;
@@ -367,6 +366,8 @@ h4 {
 		position: absolute;
 		top: 0;
 		bottom: 0;
+        right: 0;
+        left: 0;
 		overflow: hidden;
 		border-left: @border;
 		border-right: @border;
@@ -464,9 +465,10 @@ h4 {
 
 .blogpost.big {
 	.item.w2();
+    .item.h3();
 
 	.readmore {
-		top: -606px;
+		top: -575px;
 	}
 
 	.entry-header-index {
