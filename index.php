@@ -21,4 +21,5 @@
 		</div>
 	</div>
 </div>
+<script>isoinit()</script>
 <?php get_footer()?>

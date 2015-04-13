@@ -13,7 +13,7 @@
 			<?php echo '<div class="post-info">Posted by ',get_the_author_link() , ' on ', get_the_date(), '</div>';?> 
 			<?php the_content();?>
 			
-		<?php endwhile;?>1
+		<?php endwhile;?>
 
 		<?php comments_template();?>
 	<div>

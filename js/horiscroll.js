@@ -5,13 +5,14 @@ function scrollHorizontally(e) {
   document.getElementById('contentwrapper').scrollLeft -= (delta*60);
   e.preventDefault();
 }
-
-if (document.getElementById('contentwrapper').addEventListener) {
-  document.getElementById('contentwrapper')
-    .addEventListener("mousewheel", scrollHorizontally, false);
-  document.getElementById('contentwrapper')
-    .addEventListener("DOMMouseScroll", scrollHorizontally, false);
-} else {
-  document.getElementById('contentwrapper')
-    .attachEvent("onmousewheel", scrollHorizontally);
+function horizontal(){
+  if (document.getElementById('contentwrapper').addEventListener) {
+    document.getElementById('contentwrapper')
+      .addEventListener("mousewheel", scrollHorizontally, false);
+    document.getElementById('contentwrapper')
+      .addEventListener("DOMMouseScroll", scrollHorizontally, false);
+  } else {
+    document.getElementById('contentwrapper')
+      .attachEvent("onmousewheel", scrollHorizontally);
+  }
 }

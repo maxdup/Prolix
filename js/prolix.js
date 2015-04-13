@@ -10,6 +10,7 @@ $.urlParam = function(name){
 
 function isoinit(){
   //isotope init
+  horizontal()
   var $container = $('#isotope');
   var $selector = $.urlParam('filter');
   var $biggies = [];
