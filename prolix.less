@@ -72,21 +72,28 @@ a {
 	}
 }
 .content {
-	height: 100%;
-	padding-left: 30px;
-	padding-right: 20px;
+    height: 100%;
+    padding-left: 30px;
+    padding-right: 20px;
+}
+.pagecontent {
+    padding-top:200px;
 }
 .contentblogpost {
 	background: white;
 	min-width: 400px;
 	max-width: 600px;
 	margin: auto;
-	padding: 122px 15% 0 15%;
+    height: 100%;
+	padding: 0 15% 0 15%;
 }
 .post-info {
 	padding-bottom: 30px;
 }
 #respond {
+    position: fixed;
+    bottom: 0;
+    width: 560px;
 	padding: 15px;
 	background: lightgray;
 	margin-top: 30px;
@@ -96,27 +103,27 @@ a {
 	display: block;
 	background: #DDD;
 	margin-bottom: 10px;
-	padding: 6px;
+	padding: 2px;
 	.comment-body{
 		overflow: hidden;
 	}
 	.comment-author{
 		background: #FFF;
-		padding: 10px;
 		font-size: 18px;
 		margin-bottom: 5px;
+        line-height: 28px;
 		img{
 			vertical-align: bottom;
 		}
 	}
 	.comment-meta{
-		font-size: 14px;
-		margin-bottom: 10px;
-		padding: 0 12px;
+        font-size: 12px;
+        padding-left: 36px;
 	}
 	p{
-		padding: 0 12px;
-		margin-bottom: 5px;
+        padding: 0px;
+		padding-left: 36px;
+        padding-top: 10px;
 	}
 	.reply{
 		height: 24px;
