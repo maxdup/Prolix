@@ -16,6 +16,21 @@
 		</header>
 		<div class="site-description"><?php bloginfo( 'description' ); ?></div>
 		<nav>
+
+        <div class="menu-indexmenu-container">
+        <ul id="menu-indexmenu">
+        <li><a href="<?php echo home_url('/')?>">Recent</a></li>
+        <?php
+            for ($m=date('n', strtotime('-1 month')); $m>0; $m--) {
+             $month = date('F', mktime(0,0,0,$m, 1, date('Y')));
+             echo '<li><a href="', home_url('/'), '?m=20150';
+             echo $m, '">', $month, '</a></li>';
+        }
+        ?>
+        </ul>
+        </div>
+        <br/>
+
 		<?php
 			if(is_front_page()){
 				prolix_nav_menu_filter();				
