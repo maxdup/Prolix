@@ -31,14 +31,15 @@ module.exports = function(grunt) {
 		banner: '/* all changes made here will be overwritten eventually*/'
 	  },
 	  js: {
-		src: ['js/jquery-1.7.2.min.js',
-			  'carousel/transition.js',
-			  'carousel/carousel.js',
-			  'js/jquery.isotope.min.js',
-			  'lightbox/jquery.magnific-popup.min.js',
-			  'js/prolix.js'
-			 ],
-		dest: 'concat.js',
+        src: ['js/jquery-1.7.2.min.js',
+              'carousel/transition.js',
+              'carousel/carousel.js',
+              'js/jquery.isotope.min.js',
+              'lightbox/jquery.magnific-popup.min.js',
+              'js/horiscroll.js',
+              'js/prolix.js',
+             ],
+        dest: 'concat.js',
 	  },
 	  css: {
 		src: ['style.css',
